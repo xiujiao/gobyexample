@@ -57,4 +57,36 @@ func main() {
 	default:
 		fmt.Println("this is afternoon")
 	}
+
+	s := make([]string, 3)
+	s[0] = "x"
+	s[1] = "i"
+	s[2] = "u"
+	fmt.Println("s is ", s, "the length of it is ", len(s))
+
+	s = append(s, "jiao")
+	s = append(s, "is")
+	s = append(s, "wonderful")
+
+	fmt.Println("now s is :", s)
+
+	c := make([]string, len(s))
+	copy(c, s)
+	fmt.Println("c is ", c)
+
+	l := s[2:5]
+	l1 := s[:5]
+	l2 := s[2:]
+	fmt.Println(l, l1, l2)
+
+	twoD := make([][]int, 2)
+	for i := 0; i < 2; i++ {
+		innerlen := i + 3
+		twoD[i] = make([]int, innerlen)
+		for j := 0; j < innerlen; j++ {
+			twoD[i][j] = i + j
+		}
+	}
+	fmt.Println(twoD)
+
 }
