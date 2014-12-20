@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -25,5 +26,10 @@ func main() {
 	fmt.Println("xiujiao is ", xiujiao)
 	fmt.Println("past is", past)
 	fmt.Println("o,p.q", o, p, q)
+
+	const today = "Saturday"
+	const n = 2000
+	fmt.Println(today)
+	fmt.Println(math.Sin(n))
 
 }
