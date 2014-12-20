@@ -32,4 +32,13 @@ func main() {
 	fmt.Println(today)
 	fmt.Println(math.Sin(n))
 
+	for i := 1; i < 3; i++ {
+		fmt.Println(i)
+	}
+	if j := 0; j < 6 {
+		j = j + 3
+	} else if j > 10 {
+		j = j - 3
+	}
+
 }
