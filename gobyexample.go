@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 func main() {
@@ -41,4 +42,19 @@ func main() {
 		j = j - 3
 	}
 
+	fmt.Println(time.Now().Weekday())
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("This is weekend")
+	default:
+		fmt.Println("this is a weekday")
+	}
+
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("this is before noon")
+	default:
+		fmt.Println("this is afternoon")
+	}
 }
