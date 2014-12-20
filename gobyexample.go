@@ -15,4 +15,15 @@ func main() {
 	fmt.Println(!true)
 	fmt.Println(!false)
 
+	var a string = "love is luxury, not everyone will own it forever"
+	var f = 0
+	xiujiao := "xj"
+	var past = 3.14
+	var o, p, q = 2, 4, 7.89
+	fmt.Println("a=", a)
+	fmt.Println("f=", f)
+	fmt.Println("xiujiao is ", xiujiao)
+	fmt.Println("past is", past)
+	fmt.Println("o,p.q", o, p, q)
+
 }
