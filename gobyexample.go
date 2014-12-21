@@ -6,6 +6,25 @@ import (
 	"time"
 )
 
+func add(a int, b int) int {
+	return a + b
+}
+
+func sum(num ...int) int {
+	total := 0
+	for _, value := range num {
+		total = total + value
+	}
+	return total
+}
+
+func fact(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * fact(n-1)
+}
+
 func main() {
 	fmt.Println("hello, xiujiao")
 
@@ -92,5 +111,14 @@ func main() {
 	for i, content := range s {
 		fmt.Println(i, content)
 	}
+
+	ans := add(1, 3)
+	fmt.Println("1+3=", ans)
+
+	num := []int{2, 4, 4, 6, 7, 0, 9}
+	ans = sum(num...)
+	fmt.Println("the sum is ", ans)
+
+	fmt.Println(" the factorial  of 7 is ", fact(7))
 
 }
