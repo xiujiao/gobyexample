@@ -89,4 +89,8 @@ func main() {
 	}
 	fmt.Println(twoD)
 
+	for i, content := range s {
+		fmt.Println(i, content)
+	}
+
 }
