@@ -25,6 +25,14 @@ func fact(n int) int {
 	return n * fact(n-1)
 }
 
+func value(n int) {
+	n = 0
+}
+
+func pointer(n *int) {
+	*n = 0
+}
+
 func main() {
 	fmt.Println("hello, xiujiao")
 
@@ -120,5 +128,13 @@ func main() {
 	fmt.Println("the sum is ", ans)
 
 	fmt.Println(" the factorial  of 7 is ", fact(7))
+
+	i := 1
+
+	fmt.Println("i is ", i)
+	value(i)
+	fmt.Println("after calling value func, i is ", i)
+	pointer(&i)
+	fmt.Println("after calling pointer funcm i is ", i)
 
 }
