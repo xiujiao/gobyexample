@@ -6,6 +6,31 @@ import (
 	"time"
 )
 
+type rectangle struct {
+	length int
+	width  int
+}
+
+type person struct {
+	name   string
+	age    int
+	gender string
+}
+
+func (r *rectangle) area() int {
+	return r.length * r.width
+}
+
+func (r *rectangle) perim() int {
+	return 2 * (r.length + r.width)
+}
+
+func (r *rectangle) changerec() {
+	r.length = 0
+	r.width = 0
+	fmt.Println("the length is :", r.length, "the width is:", r.width)
+}
+
 func add(a int, b int) int {
 	return a + b
 }
@@ -136,5 +161,23 @@ func main() {
 	fmt.Println("after calling value func, i is ", i)
 	pointer(&i)
 	fmt.Println("after calling pointer funcm i is ", i)
+
+	sperson := person{name: "forever21", age: 21}
+	fmt.Println("age is forever ", sperson.age)
+	sp := &sperson
+	sp.age = 20
+	fmt.Println("sp.age and sperson.age are :", sp.age, sperson.age)
+
+	var foo int
+	var oneptr *int = &foo
+	*oneptr = 1
+	fmt.Println("oneptr is ", *oneptr)
+	pointer(oneptr)
+	fmt.Println("after calling pointer, oneptr is ", *oneptr)
+
+	rec := rectangle{length: 2, width: 3}
+	fmt.Println("area:", rec.area())
+	fmt.Println("perim:", rec.perim())
+	rec.changerec()
 
 }
